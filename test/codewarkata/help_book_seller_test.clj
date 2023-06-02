@@ -1,6 +1,6 @@
 (ns codewarkata.help-book-seller-test
   (:require [clojure.string :as string]
-            [clojure.test :refer :all]))
+            [clojure.test :refer [deftest testing is]]))
 
 (def ur ["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"])
 (def vr ["A" "B" "C" "D"])
