@@ -27,7 +27,7 @@
   (testing "Test 1"
     (is (= (stock-list ur vr) res)))
   (testing "empty stocks"
-    (is (= (stock-list [1] vr) []))))
+    (is (= (stock-list [] vr) []))))
 
 (comment
   (stock-list [] ["A" "B"])
