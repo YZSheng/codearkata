@@ -22,7 +22,3 @@
     (is (= (choose-best-sum 163, 3, ts) 163))
     (def ts [50])
     (is (= (choose-best-sum 163, 3, ts) nil))))
-
-(comment
-  (combinations [1 1 2 3] 3)
-  (range 4))
