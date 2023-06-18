@@ -12,13 +12,11 @@
 (defn choose-best-sum [max-distance town-count ls]
   (let [plans (combinations ls town-count)
         available-plans (filter #(>= max-distance (apply + %)) plans)]
-    (if (empty? available-plans) 
-      nil 
+    (if (empty? available-plans)
+      nil
       (apply max (map #(apply + %) available-plans)))))
 
 (deftest a-test1
   (testing "Basic tests"
-    (def ts [50, 55, 56, 57, 58])
-    (is (= (choose-best-sum 163, 3, ts) 163))
-    (def ts [50])
-    (is (= (choose-best-sum 163, 3, ts) nil))))
+    (is (= (choose-best-sum 163, 3, [50, 55, 56, 57, 58]) 163))
+    (is (= (choose-best-sum 163, 3, [50]) nil))))
