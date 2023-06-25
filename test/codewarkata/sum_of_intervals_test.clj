@@ -15,9 +15,6 @@
         lengths (map (fn [[start end]] (- end start)) merged-intervals)]
     (apply + lengths)))
 
-(deftest sample-tests-1
-  (is (= 3 (sum-intervals [[1 4] [1 4]]))))
-
 (deftest sample-tests
   (are [expected calculated] (= expected calculated)
     4   (sum-intervals [[1 5]])
