@@ -21,13 +21,3 @@
     "a #b\nc\nd $e f g"
     '("#" "$")
     "a\nc\nd"))
-
-
-(+ 1 1)
-(string/join \newline ["1" "2"])
-
-(re-find #"\s[1|2].*" "1234556")
-
-
-(def pattern (re-pattern (str "\\s*[" (string/join "|" ["1" "2"]) "].*")))
-(remove #(re-find pattern %) ["# comment" "1 hello" "2 world"])
